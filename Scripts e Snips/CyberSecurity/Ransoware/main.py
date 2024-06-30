@@ -6,7 +6,7 @@ logging.basicConfig(level=logging.INFO)
 
 def main():
     try:
-        system_info = collect_system_info()
+        system_info = collect_system_info(API_URL)
         send_data(system_info, DATA_COLLECTION_URL)
         logging.info('Informações do sistema enviadas com sucesso.')   
 

