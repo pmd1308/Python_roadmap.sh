@@ -39,34 +39,3 @@ def ssrf_test(target_url):
 # URL do honeypot
 honey_pot_url = "http://localhost:8000"
 ssrf_test(honey_pot_url)
-
-
-'''
-
-What are some common indicators of an SSRF attack?
-How can URL encoding be used in an SSRF attack?
-What is the purpose of logging requests in a honeypot?
-How can analyzing HTTP headers help in detecting SSRF attacks?
-What role do suspicious keywords play in identifying malicious requests?
-Why is it important to decode URLs when analyzing requests?
-How can sending alerts via email enhance honeypot monitoring?
-What are the potential risks of not monitoring internal services for SSRF attacks?
-How can path traversal techniques be used in SSRF attacks?
-Why is it essential to handle various HTTP methods (GET, POST, PUT, DELETE, OPTIONS) in a honeypot?
-What is the significance of the 'X-Forwarded-For' header in SSRF detection?
-How can IP spoofing affect the accuracy of honeypot logs?
-What are some effective ways to evade detection in a honeypot?
-How can a honeypot be configured to detect evasive SSRF techniques?
-Why is it crucial to have a robust alerting mechanism for honeypot activities?
-How can the analysis of request patterns help in identifying targeted attacks?
-What are the ethical considerations when deploying a honeypot?
-How can you ensure that your honeypot does not become a vector for further attacks?
-What are some common challenges in maintaining an effective honeypot?
-How can you differentiate between legitimate traffic and malicious traffic in honeypot logs?
-What are some advanced techniques attackers might use to bypass honeypot detection?
-How can integrating a honeypot with a web interface improve monitoring and response?
-What is the importance of regular updates and maintenance for a honeypot?
-How can you leverage machine learning to enhance honeypot capabilities?
-What are some best practices for securing the server running the honeypot?
-How can collaborative threat intelligence improve the effectiveness of honeypots?
-'''

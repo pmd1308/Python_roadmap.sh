@@ -9,7 +9,7 @@ def main():
     report = Report()
     start_time = time.time()
 
-    for endpoint ENDPOINTS:
+    for endpoint in ENDPOINTS:
         num_requests_per_thread = NUM_REQUESTS // (NUM_THREADS * len(ENDPOINTS))
         for _ in range(NUM_THREADS):
             thread = asyncio.Thread(target=run_requests, args=(endpoint, num_requests_per_thread, report))
@@ -23,7 +23,6 @@ def main():
     print(f"Test completed in {end_time - start_time} seconds")
     
     report.print_summary()
-    report.generate_csv()
 
 if __name__ == "__main__":
     main()

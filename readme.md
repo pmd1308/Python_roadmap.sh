@@ -9,7 +9,6 @@ Agora de fato decidi começar a codar em Python. Dado a versatilidade, planejo t
 - TF-IDF
 
 
-
 ## Observação
 
 E caso queira me contatar, pode acessar minha pagina inicial.

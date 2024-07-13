@@ -1,7 +1,7 @@
 import http.server
 import socketserver
 import logging
-from datetime import datetime
+import datetime
 import smtplib
 from email.mime.text import MIMEText
 from flask import Flask, render_template_string
